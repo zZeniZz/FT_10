@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>BackOffice Catalogo</title>
+  <!-- plugins:css -->
+  <link rel="stylesheet" href="vendors/ti-icons/css/themify-icons.css">
+  <link rel="stylesheet" href="vendors/base/vendor.bundle.base.css">
+  <!-- endinject -->
+  <!-- plugin css for this page -->
+  <!-- End plugin css for this page -->
+  <!-- inject:css -->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- endinject -->
+
+</head>
+
+<body>
+  <div class="container-scroller">
+    <!-- navbar -->
+    <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+      <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
+        <a class="navbar-brand brand-logo mr-5" href="index.html">BackOffice</a>
+      </div>
+      <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
+        <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
+          <span class="ti-view-list"></span>
+        </button>
+        <ul class="navbar-nav navbar-nav-right">
+          <li class="nav-item nav-profile dropdown">
+            <a class="nav-link dropdown-toggle" href="logout.php" data-toggle="dropdown" id="profileDropdown">
+
+              <!-- Ir buscar a imagem do utilizador que fez login-->
+              <img src="images/faces/face27.jpg" alt="profile" />
+            </a>
+            <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
+              <a class="dropdown-item">
+                <i class="ti-power-off text-primary"></i>
+                Sair
+              </a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!-- Enf Navbar -->
+    <div class="container-fluid page-body-wrapper">
+      <!-- sidebar -->
+      <nav class="sidebar sidebar-offcanvas" id="sidebar">
+        <ul class="nav">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">
+              <i class="ti-shield menu-icon"></i>
+              <span class="menu-title">Informações</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#tables" aria-expanded="false" aria-controls="tables">
+              <i class="ti-view-list-alt menu-icon"></i>
+              <span class="menu-title">Tabelas</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="tables">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="tbl_produtos.html"> Produtos </a></li>
+                <li class="nav-item"> <a class="nav-link" href="tbl_categorias.html"> Categorias </a></li>
+                <li class="nav-item"> <a class="nav-link" href="tbl_utilizadores.html"> Utilizadores </a></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </nav>
+      <!-- End Sidebar -->
+      <div class="main-panel">
+        <div class="content-wrapper">
+          <div class="row">
+            <div class="col-md-12 grid-margin">
+              <div class="d-flex justify-content-between align-items-center">
+                <div>
+                  <h4 class="font-weight-bold mb-0">BackOffice do Catálogo de Produtos</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-3 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body">
+                  <p class="card-title text-md-center text-xl-left">Categorias</p>
+                  <div
+                    class="d-flex flex-wrap justify-content-between justify-content-md-center justify-content-xl-between align-items-center">
+
+                    <!-- Obter o número de refgistos existentes nas categorias -->
+                    <h3 class="mb-0 mb-md-2 mb-xl-0 order-md-1 order-xl-0">40</h3>
+                    <i class="ti-agenda icon-md text-muted mb-0 mb-md-3 mb-xl-0"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body">
+                  <p class="card-title text-md-center text-xl-left">Produtos</p>
+                  <div
+                    class="d-flex flex-wrap justify-content-between justify-content-md-center justify-content-xl-between align-items-center">
+
+                    <!-- Obter o número de registos existentes nos produtos-->
+                    <h3 class="mb-0 mb-md-2 mb-xl-0 order-md-1 order-xl-0">47033</h3>
+                    <i class="ti-layers-alt icon-md text-muted mb-0 mb-md-3 mb-xl-0"></i>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body">
+                  <p class="card-title text-md-center text-xl-left">Utilizadores</p>
+                  <div
+                    class="d-flex flex-wrap justify-content-between justify-content-md-center justify-content-xl-between align-items-center">
+
+                    <!-- Obter o número de registos existentes nos utilizadores-->
+                    <h3 class="mb-0 mb-md-2 mb-xl-0 order-md-1 order-xl-0">16</h3>
+                    <i class="ti-user icon-md text-muted mb-0 mb-md-3 mb-xl-0"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <div class="row">
+            <div class="col-md-5 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body">
+                  <p class="card-title mb-0">Stock Alerta</p>
+                  <div class="table-responsive">
+                    <table class="table table-hover">
+                      <thead>
+                        <tr>
+                          <th>Produto</th>
+                          <th>Stock</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <!-- Ir buscar os produtos que têm um stock inferior ou igual a 5 -->
+                        <tr>
+                          <td>Produto 1</td>
+                          <td>Stock Atual</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- content-wrapper ends -->
+          <!-- footer -->
+          <footer class="footer">
+            <div class="d-sm-flex justify-content-center justify-content-sm-between">
+              <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © 2020 - All rights
+                reserved.</span>
+            </div>
+          </footer>
+          <!-- End footer -->
+        </div>
+        <!-- main-panel ends -->
+      </div>
+      <!-- page-body-wrapper ends -->
+    </div>
+    <!-- container-scroller -->
+
+    <!-- plugins:js -->
+    <script src="vendors/base/vendor.bundle.base.js"></script>
+    <script src="js/template.js"></script>
+    <script src="js/dashboard.js"></script>
+    <!-- End custom js for this page-->
+</body>
+
+</html>
